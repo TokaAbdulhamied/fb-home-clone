@@ -19,7 +19,7 @@ function Header() {
             <img src="https://www.elzahrawy.com/wp-content/uploads/2021/01/facebook_logos_PNG19754.png" alt="logo"/>
             <div className="header__search">
               <SearchIcon />
-              <input type="text" placeholder="search facebook"/>
+              <input type="text" placeholder="Search Facebook"/>
             </div>
           </div>
           <div className="header__middle">
