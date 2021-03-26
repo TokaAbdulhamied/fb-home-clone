@@ -45,12 +45,12 @@
 }
 .header__option:hover {
   background-color: #eff2f5;
-  color: #295396;
+  color: var(--fb);
   border-radius: 10px;
 }
 .header__option--active {
-  color: #295396;
-  border-bottom: 4px solid #295396;
+  color: var(--fb);
+  border-bottom: 4px solid var(--fb);
 }
 /* header right */
 .header__right {
