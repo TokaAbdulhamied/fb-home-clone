@@ -1,20 +1,16 @@
 
 import './App.css';
-import Header from './components/Header/Header';
-import Sidebar from './components/Sidebare/Sidebar';
+import Header from './Components/Header/Header';
+import Sidebar from './Components/Sidebare/Sidebar';
+import Feed from './Components/Feed/Feed'
 function App() {
   return (
     <div className="App">
       <Header/>
-      <div className="app__body">
+      <div className="wall">
         <Sidebar/> 
-
+        <Feed/>
       </div>
-      {/*bode
-          sidebar 
-          feeds
-          widgets
-      */}
     </div>
   );
 }
