@@ -5,4 +5,5 @@
 .wall {
   display: grid;
   grid-template-columns: 1fr 1.8fr 1fr;
+  grid-auto-rows: minmax(min-content, max-content);
 }

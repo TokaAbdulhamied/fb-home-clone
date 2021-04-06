@@ -1,0 +1,28 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+}
+.login__logo > img {
+  height: 200px;
+  padding-top: 5rem;
+}
+.login > h1 {
+  color: var(--fb);
+  font-size: xx-large;
+}
+.login > button {
+  height: 2rem;
+  width: 300px;
+  background-color: var(--fb);
+  color: #eff2f5;
+  font-weight: 800;
+  border-radius: 3px;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+.login > button:hover {
+  color: var(--fb);
+  background-color: #eff2f5;
+}
