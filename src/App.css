@@ -1,7 +1,8 @@
 .App {
   background-color: #f1f2f5;
-  height: 100vh;
+  height: auto;
 }
 .wall {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr 1fr;
 }

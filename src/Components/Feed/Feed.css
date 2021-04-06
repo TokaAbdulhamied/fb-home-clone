@@ -4,6 +4,7 @@
   justify-content: center;
   /* align-items: center; */
 }
+/* post component styling */
 .post {
   display: flex;
   flex-direction: column;
@@ -32,6 +33,7 @@
   background-color: #eff2f5;
   padding: 5px 20px;
   margin: 0px 10px;
+  font-size: 17px;
 }
 .post__container > form > button {
   display: none;
@@ -39,19 +41,54 @@
 .post__input {
   flex: 1;
 }
-.post__floot {
+.post__floot,
+.postItem__options {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.post__option {
+.post__option,
+.postItem__option {
+  /* flex-grow: 1; */
   display: flex;
   padding: 15px;
   margin: 5px;
   color: gray;
   cursor: pointer;
 }
-.post__option:hover {
+.post__option:hover,
+.postItem__option:hover {
   background-color: #eff2f5;
   border-radius: 20px;
+}
+.postItem__option > p {
+  padding: 5px;
+}
+.postItem {
+  width: 100%;
+  margin-top: 15px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+}
+/* post item component styling  */
+.postItem__body {
+  display: flex;
+  margin: 5px;
+  padding: 13px;
+}
+.postItem__info {
+  margin-left: 10px;
+}
+.postItem__info > p {
+  font-size: small;
+  color: gray;
+}
+.postItem__image {
+  max-width: 100%;
+  max-height: 100%;
+}
+.postItem__content {
+  margin: 10px;
+  padding: 10px;
 }
