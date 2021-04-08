@@ -1,12 +1,21 @@
 import { styled } from '@material-ui/core';
-import React, {useState} from 'react'
-import {auth, provider} from '../../firebase'
+import React, {useState, useContext} from 'react'
+import {auth, provider} from '../../store/firebase'
+import {UserContext} from '../../store/Provider' 
+import { actionTypes } from '../../store/reducer';
 import './Login.css';
 function Login() {
+
+  const [{user}, dispatch]  = useContext(UserContext)
+
   const signHandler =()=>{
     // import auth and provider from local firebase 
     auth.signInWithPopup (provider)
     .then ((respose)=> {
+      dispatch ({
+        type:actionTypes.ADD_USER, 
+        user:respose.user
+      })
       console.log(respose)
     })
     .catch ((error) => alert (error.message))

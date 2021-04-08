@@ -5,8 +5,10 @@ import Sidebar from './Components/Sidebare/Sidebar';
 import Feed from './Components/Feed/Feed'
 import Widget from './Components/Widget';
 import Login from "./Components/Login/Login"
+import {useContext} from "react"
+import {UserContext} from "./store/Provider"
 function App() {
-  const user = null 
+  const [{user}, dispatch]  = useContext(UserContext)
   return (
     <div className="App">
       {
