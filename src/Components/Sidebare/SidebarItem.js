@@ -1,6 +1,7 @@
 import { Avatar } from '@material-ui/core'
 import React from 'react'
 import  './Sidebar.css';
+
 function SidebarItem({title, Icon, src}) {
   return (
     <div className="sidebarItem">

@@ -1,4 +1,5 @@
-import React from 'react';
+import React , {useContext}from 'react';
+import {UserContext} from '../../store/Provider'
 import './Header.css'
 import FlagIcon from '@material-ui/icons/Flag';
 import HomeIcon from '@material-ui/icons/Home';
@@ -13,6 +14,8 @@ import ForumIcon from '@material-ui/icons/Forum';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 function Header() {
+  const [{user}, dispatch]  = useContext(UserContext)
+  console.log (user.photoURL)
     return (
         <div className="header">
           <div className="header__left">
@@ -41,8 +44,8 @@ function Header() {
           </div>
           <div className="header__right">
             <div className="header__user">
-              <Avatar/>
-              <h4> Toka Abdulhamied</h4>
+              <Avatar src={user.photoURL}/>
+              <h4>{user.displayName}</h4>
             </div>
             <IconButton >
               <AddIcon /> 

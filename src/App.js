@@ -7,6 +7,7 @@ import Widget from './Components/Widget';
 import Login from "./Components/Login/Login"
 import {useContext} from "react"
 import {UserContext} from "./store/Provider"
+
 function App() {
   const [{user}, dispatch]  = useContext(UserContext)
   return (
@@ -17,8 +18,10 @@ function App() {
         <>
       <Header/>
       <div className="wall">
-        <Sidebar/> 
+  
+      <Sidebar/> 
         <Feed/>
+
         <Widget/>
       </div>
       </>

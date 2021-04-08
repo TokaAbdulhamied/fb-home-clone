@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {Avatar} from '@material-ui/core'
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import VideocamIcon from '@material-ui/icons/Videocam';
+import {UserContext} from '../../store/Provider'
 import './Feed.css'
 function Post() {
+  const [{user}] = useContext (UserContext)
   const [input, setInput] = useState("")
   const [imageURL, setImageURL] = useState("")
   const submitHandler =(e)=>{
@@ -17,7 +19,7 @@ function Post() {
   return (
     <div className="post">
       <div className="post__container">
-        <Avatar src="https://styles.redditmedia.com/t5_bkynz/styles/profileIcon_snoo41bc2925-461a-48e1-9960-6b4863af34cc-headshot.png?width=256&height=256&crop=256:256,smart&s=eb99389295bf3d5bff50edc3f6f93f8723debf29"/>
+        <Avatar src={user.photoURL}/>
         <form>
         <input className="post__input" value={input} onChange={(e)=>{setInput(e.target.value)}} placeholder="what's on your mind?"/>
         <input placeholder="image URL"value={imageURL} onChange={(e)=>{setImageURL(e.target.value)}}/>
