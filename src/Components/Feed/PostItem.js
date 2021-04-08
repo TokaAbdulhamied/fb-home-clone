@@ -11,7 +11,7 @@ function PostItem({PP, userName, timestamp, image, content}) {
         <Avatar src={PP}/>
         <div className="postItem__info">
           <h4>{userName}</h4>
-          <p>{timestamp}</p>
+          <p>{new Date (timestamp?.toDate()).toUTCString()}</p>
         </div>
       </div>
       <div className="postItem__content">

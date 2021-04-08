@@ -1,19 +1,35 @@
-import React, {useContext} from 'react'
+import React, {useState, useEffect} from 'react'
 import Post from './Post'
 import './Feed.css'
 import PostItem from './PostItem'
 import {UserContext} from '../../store/Provider'
-
+import db from '../../store/firebase'
 function Feed() {
-  const [{user}] = useContext (UserContext)
+  const [posts, setPosts] = useState ([])
+   useEffect(() => {
+     db.collection("posts").onSnapshot ((snapshot)=>(
+        setPosts (snapshot.docs.map((doc) => ({id:doc.id , data:doc.data() })))
+     ))
+   }, [])
+   console.log (posts)
   return (
     <div className="feed">
       <Post/>
-      <PostItem PP={user.photoURL}
-                image="https://d25tv1xepz39hi.cloudfront.net/2016-08-01/files/picture-style_1311.jpg"
-                userName="Toka Abdulhamied" timestamp="timestamp.." content="this is so beutiful"/>
-      <PostItem PP="https://styles.redditmedia.com/t5_bkynz/styles/profileIcon_snoo41bc2925-461a-48e1-9960-6b4863af34cc-headshot.png?width=256&height=256&crop=256:256,smart&s=eb99389295bf3d5bff50edc3f6f93f8723debf29"
-                userName="Toka Abdulhamied" timestamp="timestamp.." content="this is so beutiful"/>
+      {
+        posts.map((post)=> 
+        (
+          <PostItem
+          key={post.id}
+          PP={post.data.PP}
+          image={post.data.image}
+          userName={post.data.userName}
+          timestamp={post.data.timestamp}
+          content={post.data.message}
+          
+          />
+        ))
+      }
+      
     </div>
   )
 }

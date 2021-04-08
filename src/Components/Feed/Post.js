@@ -4,6 +4,8 @@ import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import {UserContext} from '../../store/Provider'
+import db from '../../store/firebase'
+import firebase from "firebase"
 import './Feed.css'
 function Post() {
   const [{user}] = useContext (UserContext)
@@ -11,7 +13,13 @@ function Post() {
   const [imageURL, setImageURL] = useState("")
   const submitHandler =(e)=>{
     e.preventDefault ()
-    console.log(e)
+    db.collection("posts").add ({
+      message:input,
+      image:imageURL, 
+      PP:user.photoURL, 
+      userName:user.displayName, 
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
     setInput ("")
     setImageURL("")
   }
