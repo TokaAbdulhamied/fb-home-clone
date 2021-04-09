@@ -16,7 +16,6 @@ function Login() {
         type:actionTypes.ADD_USER, 
         user:respose.user
       })
-      // console.log(respose)
     })
     .catch ((error) => alert (error.message))
     

@@ -4,6 +4,7 @@ export const intitialState = {
 // dispatch 
 export const actionTypes = {
   ADD_USER : "ADD_USER" 
+  
 }
 
 const reducer = (state, action) =>{
@@ -16,7 +17,6 @@ const reducer = (state, action) =>{
     }
     default:
       return state 
-
   }
 }
 

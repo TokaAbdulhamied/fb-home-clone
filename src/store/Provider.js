@@ -1,4 +1,4 @@
-import React, {useState, useContext, useReducer, createContext} from 'react'
+import React, {useReducer, createContext} from 'react'
 export const UserContext = createContext()
 
 function Provider({reducer, children, intitialState}) {

@@ -8,17 +8,22 @@ import db from '../../store/firebase'
 import firebase from "firebase"
 import './Feed.css'
 function Post() {
+
   const [{user}] = useContext (UserContext)
   const [input, setInput] = useState("")
   const [imageURL, setImageURL] = useState("")
+  const email = user.email.split('@')
+
   const submitHandler =(e)=>{
     e.preventDefault ()
     db.collection("posts").add ({
-      message:input,
+      content:input,
       image:imageURL, 
       PP:user.photoURL, 
-      userName:user.displayName, 
-      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      Name:user.displayName, 
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(), 
+      userName:email[0]
+
     })
     setInput ("")
     setImageURL("")
