@@ -14,6 +14,7 @@ import ForumIcon from '@material-ui/icons/Forum';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 function Header() {
+  // eslint-disable-next-line
   const [{user}, dispatch]  = useContext(UserContext)
   console.log (user.photoURL)
     return (

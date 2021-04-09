@@ -9,6 +9,7 @@ import {useContext} from "react"
 import {UserContext} from "./store/Provider"
 
 function App() {
+  // eslint-disable-next-line
   const [{user}, dispatch]  = useContext(UserContext)
   return (
     <div className="App">

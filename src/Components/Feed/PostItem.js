@@ -1,14 +1,12 @@
 import { Avatar } from '@material-ui/core'
-import React, {useContext} from 'react'
+import React from 'react'
 import './Feed.css'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import NearMeIcon from '@material-ui/icons/NearMe';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
-import {UserContext} from '../../store/Provider'
 
 function PostItem({PP, Name, timestamp, image, content, userName}) {
-  // const user = 
   return (
     <div className="postItem">
       <div className="postItem__body">
@@ -20,16 +18,16 @@ function PostItem({PP, Name, timestamp, image, content, userName}) {
           </div>
           <p>{new Date (timestamp?.toDate()).toUTCString()}</p>
         </div>
-        <span className="postItem__delete">
+        {/* <span className="postItem__delete">
           <DeleteOutlineIcon />
-        </span>
+        </span> */}
         
       </div>
       <div className="postItem__content">
         {content}
       </div>
       <div className="postItem__image">
-        {image && <img src={image} width="100%" height="100%" />}
+        {image && <img src={image} width="100%" height="100%" alt="post"/>}
       </div>
       <div className="postItem__options">
         <div className="postItem__option">

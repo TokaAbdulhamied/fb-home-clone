@@ -1,11 +1,10 @@
-import { styled } from '@material-ui/core';
-import React, {useState, useContext} from 'react'
+import React, { useContext} from 'react'
 import {auth, provider} from '../../store/firebase'
 import {UserContext} from '../../store/Provider' 
 import { actionTypes } from '../../store/reducer';
 import './Login.css';
 function Login() {
-
+  // eslint-disable-next-line
   const [{user}, dispatch]  = useContext(UserContext)
 
   const signHandler =()=>{

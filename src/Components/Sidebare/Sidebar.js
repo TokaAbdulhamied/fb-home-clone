@@ -11,7 +11,7 @@ function Sidebar(){
   const [{user}] = useContext (UserContext)
 
   return (
-    <div className="Sidebare">
+    <div className="sidebar">
       <SidebarItem src= {user.photoURL} title= {user.displayName}/> 
       <SidebarItem Icon={EmojiFlagsIcon} title="Pages"/> 
       <SidebarItem Icon={PeopleIcon} title="Friends"/> 

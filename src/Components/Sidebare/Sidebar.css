@@ -1,5 +1,7 @@
 /* Sidebar items */
-
+.sidebar {
+  margin-right: 100px;
+}
 .sidebarItem {
   display: flex;
   align-items: center;
