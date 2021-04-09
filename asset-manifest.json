@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fb-home-clone/static/css/main.001aab85.chunk.css",
+    "main.js": "/fb-home-clone/static/js/main.ea8b8e96.chunk.js",
+    "main.js.map": "/fb-home-clone/static/js/main.ea8b8e96.chunk.js.map",
+    "runtime-main.js": "/fb-home-clone/static/js/runtime-main.75c409b1.js",
+    "runtime-main.js.map": "/fb-home-clone/static/js/runtime-main.75c409b1.js.map",
+    "static/js/2.13a91c49.chunk.js": "/fb-home-clone/static/js/2.13a91c49.chunk.js",
+    "static/js/2.13a91c49.chunk.js.map": "/fb-home-clone/static/js/2.13a91c49.chunk.js.map",
+    "static/js/3.97f22375.chunk.js": "/fb-home-clone/static/js/3.97f22375.chunk.js",
+    "static/js/3.97f22375.chunk.js.map": "/fb-home-clone/static/js/3.97f22375.chunk.js.map",
+    "index.html": "/fb-home-clone/index.html",
+    "static/css/main.001aab85.chunk.css.map": "/fb-home-clone/static/css/main.001aab85.chunk.css.map",
+    "static/js/2.13a91c49.chunk.js.LICENSE.txt": "/fb-home-clone/static/js/2.13a91c49.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75c409b1.js",
+    "static/js/2.13a91c49.chunk.js",
+    "static/css/main.001aab85.chunk.css",
+    "static/js/main.ea8b8e96.chunk.js"
+  ]
+}
